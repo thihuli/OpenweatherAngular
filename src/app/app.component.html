@@ -1,0 +1,72 @@
+<div class="container p-4">
+  <div class="container">
+    <div class="col-md">
+      <div class="card card-body">
+      <img width="180" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" class="mx-auto">
+        <form (submit)="submitLocation(cityName)">
+          <input type="text" placeholder="Cidade" class="form-control" autofocus #cityName>
+
+          <button class="btn btn-primary btn-block mt-2">
+            Pesquisar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md">
+      <div *ngIf="weather" class="card card-body text-center">
+        <h1 class="h4">Informações do Tempo</h1>
+        <p>Cidade: {{weather.city.name}}</p>
+        <p>Temperatura:{{weather.list[0].main.temp}}°C</p>
+        <p>Temperatura Maxima:{{weather.list[0].main.temp_max}}°C</p>
+        <p>Temperatura Minima:{{weather.list[0].main.temp_min}}°C</p>
+        <p>Descrição:{{weather.list[0].weather[0].description}} </p>
+      </div>
+
+    </div>
+    <div class="col-md">
+      <div *ngIf="weather" class="card card-body text-center">
+        <h1 class="h4">Terça-Feira</h1>
+
+        <p>Temperatura:{{weather.list[1].main.temp}}°C</p>
+        <p>Temperatura Maxima:{{weather.list[1].main.temp_max}}°C</p>
+        <p>Temperatura Minima:{{weather.list[1].main.temp_min}}°C</p>
+        <p>Descrição:{{weather.list[1].weather[0].description}} </p>
+      </div>
+
+    </div>
+    <div class="col-md">
+        <div *ngIf="weather" class="card card-body text-center">
+          <h1 class="h4">Quarta-Feira</h1>
+
+          <p>Temperatura:{{weather.list[2].main.temp}}°C</p>
+          <p>Temperatura Maxima:{{weather.list[2].main.temp_max}}°C</p>
+          <p>Temperatura Minima:{{weather.list[2].main.temp_min}}°C</p>
+          <p>Descrição:{{weather.list[2].weather[0].description}} </p>
+        </div>
+
+      </div>
+      <div class="col-md">
+          <div *ngIf="weather" class="card card-body text-center">
+            <h1 class="h4">Quinta-Feira</h1>
+
+            <p>Temperatura:{{weather.list[3].main.temp}}°C</p>
+            <p>Temperatura Maxima:{{weather.list[3].main.temp_max}}°C</p>
+            <p>Temperatura Minima:{{weather.list[3].main.temp_min}}°C</p>
+            <p>Descrição:{{weather.list[3].weather[0].description}} </p>
+          </div>
+
+        </div>
+        <div class="col-md">
+            <div *ngIf="weather" class="card card-body text-center">
+              <h1 class="h4">Sexta-Feira</h1>
+
+              <p>Temperatura:{{weather.list[4].main.temp}}°C</p>
+              <p>Temperatura Maxima:{{weather.list[4].main.temp_max}}°C</p>
+              <p>Temperatura Minima:{{weather.list[4].main.temp_min}}°C</p>
+              <p>Descrição:{{weather.list[4].weather[0].description}} </p>
+            </div>
+
+          </div>
+  </div>
+</div>
